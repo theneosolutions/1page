@@ -40,7 +40,7 @@ const NavBar = () => {
               <Link className="navbar-brand" href="/" onClick={hidenMenu}>
                 <Image src={Logo} className="logo" alt="logo" style={{height:170, width:230}}/>
               </Link>
-              <button
+              {/* <button
                 className="navbar-toggler collapsed"
                 type="button"
                 data-bs-toggle="collapse"
@@ -49,7 +49,7 @@ const NavBar = () => {
                 <i>
                   <FaBars />
                 </i>
-              </button>
+              </button> */}
               <div
                 className="collapse navbar-collapse justify-content-end"
                 id="navbar-content"
