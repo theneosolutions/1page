@@ -20,14 +20,14 @@ const HomeBanner = () => {
                     Embark on your journey towards financial independence and wellness. Make a wiser borrowing decisions.
                     </p>
                   </div>
-                  <div className="bottom-area">
+                  {/* <div className="bottom-area">
                     <Link href="#" className="cmn-btn">
                       Open Account
                     </Link>
                     <Link href="#" className="cmn-btn second">
                       Get in touch
                     </Link>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               
