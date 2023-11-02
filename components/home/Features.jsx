@@ -20,7 +20,7 @@ const Features = () => {
                   <h5 className="sub-title">Digital Banking</h5>
                   <h3 className="title">Optimal Financial Partner </h3>
                   <p>
-                  We are committed to providing top-tier financial services in full compliance with Islamic Sharia principles.
+                  We are committed to provide top-tier financial services in full compliance with Islamic Sharia principles.
                   </p>
                   <ul className="list">
                     <li className="list-item d-flex align-items-center">

@@ -38,7 +38,7 @@ const NavBar = () => {
           <div className="row d-flex header-area">
             <nav className="navbar navbar-expand-lg navbar-light">
               <Link className="navbar-brand" href="/" onClick={hidenMenu}>
-                <Image src={Logo} className="logo" alt="logo"/>
+                <Image src={Logo} className="logo" alt="logo" style={{height:170, width:230}}/>
               </Link>
               <button
                 className="navbar-toggler collapsed"
