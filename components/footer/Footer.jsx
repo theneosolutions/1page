@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -7,11 +8,56 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import Social from "../social/Social";
+import emailjs from '@emailjs/browser';
 import footer_Illu_left from "/public/images/footer-Illu-left.png";
 import footer_Illu_right from "/public/images/footer-Illu-right.png";
 import Logo from "/public/images/logo.png";
 
 const Footer = () => {
+  const [formData, setFormData] = useState({email:''})
+  const [successMessage, setSuccessMessage] = useState(''); // Initialize success message state
+
+  const [errors,setErrors]=useState({});
+
+  const handleInputChange=(e)=>{
+    const {name,value}=e.target;
+    setFormData({
+      ...formData,
+      [name]:value,
+    })
+  }
+
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    
+    const newErrors={};
+    if(formData.email.trim()===''){
+      newErrors.email="Email is required";
+    }
+    if(Object.keys(newErrors.length===0)){
+      console.log('Form data:' ,formData);
+      
+      sendEmail("mzain6805@gmail.com")
+      setSuccessMessage('Thank you for subscribing!');
+  }
+  else { 
+    setErrors(newErrors);
+  }
+  }
+ 
+  // Email Work
+  function sendEmail(email){
+    const templateParam={
+      email:email
+    }
+    emailjs.send('service_t75hx4n', 'template_n7tcrti', templateParam, 'FAUfdkoBk63a7Ne2q')
+    .then((response) => {
+      console.log('SUCCESS!', response, response.text);
+    }, (error) => {
+      console.log('FAILED...', error);
+    });
+  }
+
   return (
     <div className="footer-section">
       <div className="container pt-120">
@@ -91,17 +137,25 @@ const Footer = () => {
           </div> */}
           <div className="col-xl-6 col-8">
             <div className="footer-box">
-              <h5>Subscribe</h5>
-              <form>
-                <div className="form-group">
-                  <input
-                    type="text"
-                    placeholder="Enter Your Email address"
-                    required
-                  />
-                  <button className="cmn-btn">Subscribe</button>
-                </div>
-              </form>
+            <h5>Subscribe</h5>
+            
+                <form onSubmit={handleSubmit}>
+                  <div className="form-group">
+                    <input
+                      name="email"
+                      id="email"
+                      type="email"
+                      placeholder="Enter Your Email address"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                    />
+                    <button type="submit" 
+                    // disabled={successMessage ? true : false}
+                     className="cmn-btn">{successMessage ? successMessage : "Subscribe"}</button>
+                  </div>
+                </form>
+             
               <p>
                 Get the latest updates via email. Any time you may unsubscribe
               </p>
