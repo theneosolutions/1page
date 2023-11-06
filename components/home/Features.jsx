@@ -9,7 +9,7 @@ const Features = () => {
   return (
     <>
       <section className="features-section">
-        <div className="overlay pt-120">
+        <div className="overlay pt-30">
           <div className="container wow fadeInUp">
             <div className="row">
               <div className="col-lg-6">

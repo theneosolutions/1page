@@ -131,8 +131,61 @@ input[type="password"] {
 
 .select {
   position: relative;
-  background-color: transparent;
+  background-color: transredparent;
 
+  &::after {
+    content: "";
+    vertical-align: 0;
+    background-image: url(/images/icon/menu-down.png);
+    background-repeat: no-repeat;
+    // background-size: 85%;
+    border: none;
+    width: 40px;
+    height: 11px;
+  }
+}
+.selecthPhone {
+  position: relative;
+  width: 20%;
+  border: 1px solid #eef1ff;
+  border-radius: 5px;
+  background: #f5faff;  .selectmain {
+   
+    
+    -webkit-appearance: none;
+    padding: 10px 10px !important;
+    cursor: pointer;
+    background-color: transparent;
+    background: transparent;
+    padding: 10px 0px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  
+ 
+}
+.select2 {
+  position: relative;
+  width: 100%;
+  border: 1px solid #eef1ff;
+  border-radius: 5px;
+  background: #f5faff;  .selectmain {
+    width: 90%;
+    
+    -webkit-appearance: none;
+    padding: 10px 10px !important;
+    cursor: pointer;
+    background-color: transparent;
+    background: transparent;
+    padding: 10px 0px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  
   &::after {
     content: "";
     vertical-align: 0;
@@ -328,8 +381,20 @@ li {
 .pt-120 {
   padding-top: 120px;
 }
+.pt-30 {
+  padding-top: 30px;
+}
+.pt-60 {
+  padding-top: 30px;
+}
 
 @media (max-width: 991px) {
+  .pt-30 {
+    padding-top: 30px;
+  }
+  .pt-60 {
+    padding-top: 30px;
+  }
   .pt-120 {
     padding-top: 60px;
   }
@@ -342,6 +407,12 @@ li {
 }
 
 @media (max-width: 575px) {
+  .pt-30 {
+    padding-top: 30px;
+  }
+  .pt-60 {
+    padding-top: 30px;
+  }
   .pt-120 {
     padding-top: 50px;
   }

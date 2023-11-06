@@ -3,7 +3,7 @@ import ContactForm from "./ContactForm";
 const GetInTouch = () => {
   return (
     <section className="apply-for-loan contact">
-      <div className="overlay pt-120 pb-120">
+      <div className="overlay pt-60 pb-120">
         <div className="container wow fadeInUp">
           <div className="row justify-content-center">
             <div className="col-lg-8">
