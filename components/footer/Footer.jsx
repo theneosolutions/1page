@@ -37,7 +37,7 @@ const Footer = () => {
     if(Object.keys(newErrors.length===0)){
       console.log('Form data:' ,formData);
       
-      sendEmail("mzain6805@gmail.com")
+      sendEmail(formData.email)
       setSuccessMessage('Thank you for subscribing!');
   }
   else { 
